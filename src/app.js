@@ -7,21 +7,23 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let pronoun = [
-    "she",
-    "her",
-    "hers",
+  const pronoun = [
+    "I",
+    "we",
+    "you",
     "he",
-    "him",
-    "his",
+    "she",
+    "it",
     "they",
-    "them",
-    "theirs",
-    "ze",
-    "hir",
-    "hirs"
+    "my",
+    "our",
+    "your",
+    "her",
+    "his",
+    "their"
   ];
-  let adj = [
+
+  const adj = [
     "aggressive",
     "agreeable",
     "ambitious",
@@ -31,5 +33,33 @@ window.onload = function() {
     "eager",
     "faithful"
   ];
-  let noun = ["programmer", "console", "beaver", ""];
+
+  const noun = [
+    "cloud",
+    "beaver",
+    "water",
+    "bottle",
+    "woman",
+    "child",
+    "brother",
+    "monkey",
+    "lion",
+    "girl",
+    "dude"
+  ];
+
+  const allWords = [pronoun, adj, noun];
+
+  function generateDomainName() {
+    let domainName = "";
+    for (let i = 0; i < allWords.length; i++) {
+      let randomIndex = Math.floor(Math.random() * allWords[i].length);
+      domainName += allWords[i][randomIndex];
+    }
+    return domainName + ".com";
+  }
+  for (let i = 0; i < 10; i++) {
+    console.log(generateDomainName());
+  }
+  document.getElementById("theDomain").innerText = generateDomainName();
 };
