@@ -7,5 +7,29 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  let pronoun = [
+    "she",
+    "her",
+    "hers",
+    "he",
+    "him",
+    "his",
+    "they",
+    "them",
+    "theirs",
+    "ze",
+    "hir",
+    "hirs"
+  ];
+  let adj = [
+    "aggressive",
+    "agreeable",
+    "ambitious",
+    "brave",
+    "calm",
+    "delightful",
+    "eager",
+    "faithful"
+  ];
+  let noun = ["programmer", "console", "beaver", ""];
 };
